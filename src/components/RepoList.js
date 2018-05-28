@@ -36,7 +36,12 @@ class RepoList extends Component {
 
   render() {
     if (this.state.loading === true) {
-      return <Loading />
+      return (
+        <div>
+          <h1 style={{textAlign: 'center'}}>{this.props.match.params.language}</h1>
+          <Loading />
+        </div>
+      )
     }
 
     return (
