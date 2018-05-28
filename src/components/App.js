@@ -50,7 +50,7 @@ class App extends Component {
             <Nav onChooseLanguage={this.handleChooseLanguage}/>
             <div>
               <h1 style={{textAlign: 'center'}}>{this.state.language}</h1>
-              <Route path='/:language' component={Graphql} />
+              <Route path={process.env.PUBLIC_URL + '/:language'} component={Graphql} />
             </div>
           </div>
         </ApolloProvider>
