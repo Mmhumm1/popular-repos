@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   NavLink,
-  Route,
 } from 'react-router-dom'
 
 export default function Nav(props) {
@@ -10,7 +9,7 @@ export default function Nav(props) {
     <nav>
       <ul>
         {languages.map((lang) => (
-          <li key={lang} onClick={() => props.onChooseLanguage(lang)}>
+          <li key={lang}>
             <NavLink exact activeClassName="active" to={`/${lang}`}>
               {lang}
             </NavLink>
