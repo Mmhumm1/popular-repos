@@ -1,0 +1,10 @@
+rect {
+  stroke-width: 1; }
+  rect:hover {
+    fill: #aaa; }
+
+text {
+  text-anchor: start;
+  padding: 10px; }
+  a:first-child text {
+    text-anchor: end; }

@@ -4,15 +4,12 @@ import Nav from './Nav'
 import RepoList from './RepoList'
 
 class App extends Component {
-
   render() {
     return (
       <BrowserRouter>
         <div>
           <Nav />
-          <div>
-            <Route path={process.env.PUBLIC_URL + '/:language'} component={RepoList} />
-          </div>
+          <Route path={process.env.PUBLIC_URL + '/:language'} component={RepoList} />
         </div>
       </BrowserRouter>
     )

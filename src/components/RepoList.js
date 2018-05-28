@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Repo from './Repo'
 import fetchRepos from './FetchRepos'
 import Loading from './Loading'
+import BarChart from './BarChart'
 
 class RepoList extends Component {
 
@@ -46,14 +46,8 @@ class RepoList extends Component {
 
     return (
       <div>
-        <h1 style={{textAlign: 'center'}}>{this.props.match.params.language}</h1>
-        <ul>
-          {this.state.repos.map(({name, owner, stargazers_count, html_url}) => (
-            <li key={name}>
-              <Repo name={name} url={html_url} owner={owner} stars={stargazers_count}/>
-            </li>
-          ))}
-        </ul>
+        <h1>{this.props.match.params.language}</h1>
+        <BarChart data={this.state.repos}/>
       </div>
     )
   }
