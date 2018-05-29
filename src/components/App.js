@@ -8,9 +8,9 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div>
-          <Link to='/all'><h1>Popular GitHub Repositories</h1></Link> 
+          <Link to={process.env.PUBLIC_URL + '/all'}><h1>Popular GitHub Repositories</h1></Link> 
           <Nav />
-          <Route exact path="/" render={() => <Redirect to="/all"/>} />
+          <Route exact path={process.env.PUBLIC_URL + '/'} render={() => <Redirect to={process.env.PUBLIC_URL + '/all'}/>} />
           <Route path={process.env.PUBLIC_URL + '/:language'} component={RepoList} />
         </div>
       </BrowserRouter>

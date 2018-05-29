@@ -10,7 +10,7 @@ export default function Nav(props) {
       <ul>
         {languages.map((lang) => (
           <li key={lang}>
-            <NavLink exact activeClassName="active" to={`/${lang}`}>
+            <NavLink exact activeClassName="active" to={`${process.env.PUBLIC_URL}/${lang}`}>
               {lang}
             </NavLink>
           </li>
