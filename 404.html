@@ -21,14 +21,12 @@
       function getOrigin() {
         if (window.location.origin) return window.location.origin;
         return window.location.protocol + "//" + window.location.hostname +
-          (window.location.port ? ':' + window.location.port : '');
+          (window.location.port ? ':' + window.location.port : '')
       }
       var origin = getOrigin();
-      var redirectTo = origin +
-        'popular-repos/' +
-        'redirect=true'
+      var redirectTo = origin + '/popular-repos/'
               
-      window.location.replace(redirectTo);
+      window.location.replace(redirectTo)
     </script>
   </body>
 </html>
