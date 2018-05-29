@@ -4,12 +4,17 @@ rect {
   }
 }
 
+
 text {
   text-anchor: end;
   padding: 10px;
   a:nth-child(n + 4) & {
     text-anchor: start;
   }
+}
+
+.bar:hover {
+  cursor: pointer;
 }
 
 .owner:hover {

@@ -17,7 +17,7 @@ const fillColor = (language, index) => {
 }
 
 const Bar = ({ x, y, width, height, index,  data, language }) => (
-  <a href={data.html_url}>
+  <a href={data.html_url} className="bar">
     <rect
       x={x}
       y={y}
