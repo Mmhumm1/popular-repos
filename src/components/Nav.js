@@ -4,6 +4,7 @@ import {
 } from 'react-router-dom'
 
 export default function Nav(props) {
+  // To add more languages to the app, simply add them to this array
   const languages = ['all', 'javascript', 'ruby', 'python', 'java']
   return (
     <nav>

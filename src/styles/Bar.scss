@@ -1,10 +1,3 @@
-rect {
-  &:hover {
-    fill-opacity: .8;
-  }
-}
-
-
 text {
   text-anchor: end;
   padding: 10px;
@@ -15,6 +8,10 @@ text {
 
 .bar:hover {
   cursor: pointer;
+}
+
+rect:hover {
+    fill-opacity: .8;
 }
 
 .owner:hover {

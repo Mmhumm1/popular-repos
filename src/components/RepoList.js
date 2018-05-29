@@ -42,6 +42,7 @@ class RepoList extends Component {
       })
   }
 
+  // Rerenders component if the screen size is changed
   updateScreenSize = () => {
     const width = window.innerWidth
 

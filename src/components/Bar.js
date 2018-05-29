@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/Bar.css'
 
+// Specialized bar colors for popular languages
 const fillColor = (language, index) => {
   switch(language) {
     case 'javascript':

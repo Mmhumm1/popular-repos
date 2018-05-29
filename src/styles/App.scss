@@ -1,13 +1,12 @@
 header {
   background-color: #24292e;
   padding-left: calc(100vw - 100%);
-
   .flex {
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    width: 900px;
     margin: 0 auto;
+    width: 900px;
     @media only screen and (max-width: 950px) {
       flex-direction: column;
       width: auto;
@@ -16,13 +15,11 @@ header {
       align-items: flex-start;
     }
   }
-
   h1 {
+    color: #fff;
     font-size: 30px;
     font-weight: 600;
-    color: #fff;
   }
-
   ul {
     display: flex;
     justify-content: space-between;
@@ -32,10 +29,10 @@ header {
       color: #fff;
     }
     a {
-      text-transform: capitalize;
-      padding: 8px 15px;
       color: #6a737d;
       outline: 0;
+      padding: 8px 15px;
+      text-transform: capitalize;
       &:hover {
         color: #fff;
       }
