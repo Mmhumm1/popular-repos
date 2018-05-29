@@ -1,14 +1,29 @@
 import React from 'react'
 import '../styles/Bar.css'
 
-const Bar = ({ x, y, width, height, index,  data }) => (
+const fillColor = (language, index) => {
+  switch(language) {
+    case 'javascript':
+      return `hsl(53, 84%, ${index + 65}%)`
+    case 'ruby':
+      return `hsl(359, 68%, ${index + 36}%)`
+    case 'python':
+      return `hsl(207, 51%, ${index + 43}%)`
+    case 'java':
+      return `hsl(35, 75%, ${index + 39}%)`
+    default:
+      return `hsl(212, 97%, ${index + 43}%)`
+  }
+}
+
+const Bar = ({ x, y, width, height, index,  data, language }) => (
   <a href={data.html_url}>
     <rect
       x={x}
       y={y}
       width={width}
       height={height}
-      fill={`hsl(225, 66%, ${index + 65}%)`}
+      fill={fillColor(language, index)}
     />
     <image 
       href={data.owner.avatar_url}
@@ -17,18 +32,26 @@ const Bar = ({ x, y, width, height, index,  data }) => (
       width="100px"
     />
     <text
-      x={index === 0 ? width - 10 : width + 10}
+      x={index < 3 ? width - 10 : width + 10}
       y={y}
-      dy={height / 2}
+      dy={height / 2 - 15}
+    >
+      {data.owner.login}
+    </text>
+    <text
+      x={index < 3 ? width - 10 : width + 10}
+      y={y}
+      dy={height / 2 + 5}
+      fontWeight='600'
     >
       {data.name}
     </text>
     <text
-      x={index === 0 ? width - 10 : width + 10}
+      x={index < 3 ? width - 10 : width + 10}
       y={y}
-      dy={height / 2 + 20}
+      dy={height / 2 + 25}
     >
-      @{data.owner.login}
+      {data.stargazers_count} stars
     </text>
   </a>
 )

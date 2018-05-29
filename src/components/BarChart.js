@@ -2,7 +2,7 @@ import React from 'react'
 import Bar from './Bar'
 import Chart from './Chart'
 
-const BarChart = ({data}) => {
+const BarChart = ({data, language}) => {
   const itemHeight = 100
   const itemMargin = 5
   const chartWidth = 900
@@ -32,6 +32,7 @@ const BarChart = ({data}) => {
           width={datum.stars}
           height={itemHeight}
           index={index}
+          language={language}
           data={datum}
         />
       ))}

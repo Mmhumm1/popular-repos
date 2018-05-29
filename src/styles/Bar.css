@@ -1,10 +1,12 @@
 rect {
   stroke-width: 1; }
   rect:hover {
-    fill: #aaa; }
+    stroke: #444; }
 
 text {
-  text-anchor: start;
+  text-anchor: end;
   padding: 10px; }
-  a:first-child text {
-    text-anchor: end; }
+  a:nth-child(n+4) text {
+    text-anchor: start; }
+  text .strong {
+    font-weight: bold; }

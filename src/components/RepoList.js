@@ -7,7 +7,7 @@ class RepoList extends Component {
 
   state = {
     repos: [],
-    loading: true,
+    loading: true
   }
 
   componentDidMount() {
@@ -38,7 +38,7 @@ class RepoList extends Component {
     if (this.state.loading === true) {
       return (
         <div>
-          <h1 style={{textAlign: 'center'}}>{this.props.match.params.language}</h1>
+          <h1>{this.props.match.params.language}</h1>
           <Loading />
         </div>
       )
@@ -47,7 +47,7 @@ class RepoList extends Component {
     return (
       <div>
         <h1>{this.props.match.params.language}</h1>
-        <BarChart data={this.state.repos}/>
+        <BarChart data={this.state.repos} language={this.props.match.params.language}/>
       </div>
     )
   }
