@@ -27,19 +27,22 @@ const Bar = ({ x, y, width, height, index,  data, language }) => (
     />
     <image 
       href={data.owner.avatar_url}
+      x={x - 100}
       y={y}
-      height="100px"
-      width="100px"
+      height='100px'
+      width='100px'
     />
     <text
-      x={index < 3 ? width - 10 : width + 10}
+      x={index < 3 ? width + x - 10 : width + x + 10}
       y={y}
       dy={height / 2 - 15}
+      fill={index < 3 ? '#000' : '#0366d6'}
+      className='owner'
     >
       {data.owner.login}
     </text>
     <text
-      x={index < 3 ? width - 10 : width + 10}
+      x={index < 3 ? width + x - 10 : width + x + 10}
       y={y}
       dy={height / 2 + 5}
       fontWeight='600'
@@ -47,7 +50,7 @@ const Bar = ({ x, y, width, height, index,  data, language }) => (
       {data.name}
     </text>
     <text
-      x={index < 3 ? width - 10 : width + 10}
+      x={index < 3 ? width + x - 10 : width + x + 10}
       y={y}
       dy={height / 2 + 25}
     >

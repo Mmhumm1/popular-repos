@@ -1,14 +1,17 @@
 rect {
-  stroke-width: 1;
   &:hover {
-    stroke: #444;
+    fill-opacity: .8;
   }
 }
 
 text {
   text-anchor: end;
   padding: 10px;
-  a:nth-child(n+4) & {
+  a:nth-child(n + 4) & {
     text-anchor: start;
   }
+}
+
+.owner:hover {
+  text-decoration: underline;
 }

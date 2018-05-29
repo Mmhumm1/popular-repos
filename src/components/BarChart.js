@@ -5,7 +5,14 @@ import Chart from './Chart'
 const BarChart = ({data, language}) => {
   const itemHeight = 100
   const itemMargin = 5
-  const chartWidth = 900
+  const avatarWidth = 100
+  let chartWidth = 900
+
+  if (window.matchMedia('(max-width: 620px)').matches) {
+    chartWidth = 300
+  } else if (window.matchMedia('(max-width: 950px)').matches) {
+    chartWidth = 600
+  }
 
   const mostStars = data.reduce((acc, cur) => {
     const { stargazers_count } = cur
@@ -13,7 +20,7 @@ const BarChart = ({data, language}) => {
   }, 0)
 
   // scale where repo with most stars is always full width of chart
-  const scale = (chartWidth) / mostStars
+  const scale = (chartWidth - avatarWidth) / mostStars
 
   const normalizedData = data.map(datum =>
     Object.assign({}, datum, { stars: Math.floor(datum.stargazers_count * scale) })
@@ -27,7 +34,7 @@ const BarChart = ({data, language}) => {
       {normalizedData.map((datum, index) => (
         <Bar
           key={datum.name}
-          x={0}
+          x={avatarWidth}
           y={index * (itemHeight + itemMargin)}
           width={datum.stars}
           height={itemHeight}
