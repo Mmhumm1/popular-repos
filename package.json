@@ -2,7 +2,7 @@
   "name": "popular-repos",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://Mmhumm1.github.io/popular-repos",
+  "homepage": "http://ohethan.github.io/popular-repos",
   "dependencies": {
     "node-sass-chokidar": "^1.3.0",
     "react": "^16.4.0",
